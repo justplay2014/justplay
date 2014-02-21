@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	
+	<!-- 指定Web应用默认编码集，相当于调用HttpServletRequest的setCharacterEncoding方法 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<!-- 指定Struts2处理的请求后缀，该属性默认为action，如有多个后缀，后用（,）隔开-->
+	<constant name="struts.action.extension" value="action"/>
+	<!-- 设置浏览器是否缓存静态内容，默认为true（生产环境下使用），开发阶段最好关闭 -->
+	<constant name="struts.serve.static.browserCache" value="false"/>
+	<!-- 当struts的配置文件修改后，系统是否自动重新加载该文件，默认为false（生产环境下使用），开发阶段最好打开 -->
+	<constant name="struts.configuration.xml.reload" value="true"/>
+	<!-- 开发模式下使用，这样可以打印出更详细的错误信息 -->
+	<constant name="struts.devMode" value="true"/>
+	<!-- 默认的视图主题 -->
+	<constant name="struts.ui.theme" value="simple"/>
+	<!-- 代表下面的action类由Spring来创建 -->
+	<constant name="struts.objectFactory" value="spring"/>
+	
+	<!-- 引入各个模块配置文件 -->
+	<include file="struts-user.xml"></include>
+	
+	<package name="justplay_default" extends="struts-default" namespace="/">
+		<!-- 拦截器 -->
+		<interceptors>
+			<interceptor-stack name="demoStack">
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 根据struts-2.3.dtd查看。global-results可以把一些公共的部分放在一起，如果action中找不到，就会到这里来找 -->
+		<global-results>
+			<result name="error" type="redirect">/WEB-INF/error/error.jsp</result>
+		</global-results>
+		<!-- 处理异常，在开发中先不要用 -->
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+	</package>
+</struts>
