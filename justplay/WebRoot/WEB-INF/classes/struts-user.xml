@@ -5,12 +5,17 @@
 <struts>
 	<package name="justplay-user" extends="justplay_default" namespace="/user">
 		<!-- 定义处理用户请求的action,该action的class属性不是实际的处理类，而是Spring容器中的Bean实例 -->
-		<action name="login" class="loginAction">
+		<!-- <action name="register" class="registerAction">
 			<result name="success">/WEB-INF/success/success.jsp</result>
-		</action>
+		</action> -->
 		<!-- 让用户直接访问该应用时列出所有视图画面 -->
 		<!-- <action name="*">
 			<result>/WEB-INF/page/{1}.jsp</result>
 		</action> -->
+		
+		<!-- Test -->
+		<action name="test" class="testAction">
+			<result name="success">/WEB-INF/success/success.jsp</result>
+		</action>
 	</package>
 </struts>

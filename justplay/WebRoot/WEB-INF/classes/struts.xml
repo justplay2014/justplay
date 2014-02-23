@@ -31,7 +31,7 @@
 		</interceptors>
 		<!-- 根据struts-2.3.dtd查看。global-results可以把一些公共的部分放在一起，如果action中找不到，就会到这里来找 -->
 		<global-results>
-			<result name="error" type="redirect">/WEB-INF/error/error.jsp</result>
+			<result name="error" type="redirect">/error/error.jsp</result>
 		</global-results>
 		<!-- 处理异常，在开发中先不要用 -->
 		<global-exception-mappings>

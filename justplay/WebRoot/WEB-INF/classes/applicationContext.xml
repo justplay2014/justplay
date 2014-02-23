@@ -15,23 +15,37 @@
 			http://www.springframework.org/schema/tx
 			http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 	<context:annotation-config/>
+	<!-- 配置配置文件加载路径 -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
 	<!-- 配置数据源 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://localhost:3306/justplay?useUnicode=true&amp;characterEncoding=utf8"/>
-		<property name="username" value="root"/>
-		<property name="password" value="123456"/>
+		<property name="driverClassName" value="${jdbcDriverClassName}"/>
+		<property name="url" value="${jdbcUrl}"/>
+		<property name="username" value="${jdbcUsername}"/>
+		<property name="password" value="${jdbcPassword}"/>
 		<!-- 连接池启动时的初始值 -->
-		<property name="initialSize" value="1"/>
+		<property name="initialSize" value="${jdbcInitialSize}"/>
 		<!-- 连接池允许连接的最大值 -->
-		<property name="maxActive" value="500"/>
+		<property name="maxActive" value="${jdbcMaxActive}"/>
 		<!-- 最大空闲连接数 ，当空闲值超过阈值时，连接池会慢慢将一些空闲的连接去掉，直到maxIdle为止-->
-		<property name="maxIdle" value="2"/>
+		<property name="maxIdle" value="${jdbcMaxIdle}"/>
 		<!-- 最小空闲连接数，当空闲值小于阈值时，连接池会去申请连接，以免洪峰到来时来不及申请 -->
-		<property name="minIdle" value="1"/>
+		<property name="minIdle" value="${jdbcMinIdle}"/>
+		<property name="maxWait" value="${jdbcMaxWait}" />
+		<!-- 配置测试连接的有效性 -->
+		<property name="validationQuery" value="${jdbcValidationQuery}"/>
+		<property name="defaultAutoCommit" value="true"/>
 	</bean>
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
+		<!-- <property name="configLocation" value="classpath:hibernate.cfg.xml" /> -->
 		<property name="mappingResources">
 			<list>
 				<value>com/justplay/beans/User.hbm.xml</value>
@@ -59,7 +73,7 @@
 	<!-- 利用注解方式 -->
 	<tx:annotation-driven transaction-manager="txManager"/>
 	
-	<bean id="userDao" class="com.justplay.dao.impl.UserDaoImpl" scope="prototype">
+	<bean id="userDao" class="com.justplay.dao.hibernate.UserDaoHibernate" scope="prototype">
 		 <property name="sessionFactory" ref="sessionFactory"></property>  
 	</bean>
 	<!-- 定义一个业务逻辑组件,把Service交给Spring管理 -->
@@ -69,7 +83,11 @@
 	
 	<!-- 把Action交给Spring管理，当使用Spring容器管理Struts2的Action时，由于每一个Action对应于一次用户请求，且封装了该次
  	              请求的状态信息，所以不应将Action配置成单例模式，因此必须指定scope属性，该属性值可指定为prototype和request两种-->
-	<bean id="loginAction" class="com.justplay.action.user.LoginAction" scope="prototype">
+	<!-- <bean id="registerAction" class="com.justplay.action.user.RegisterAction" scope="prototype">
+		依赖注入业务逻辑组件
+		<property name="userService" ref="userService"/>
+	</bean> -->
+	<bean id="testAction" class="com.justplay.action.test.TestHibernateDaoAction" scope="prototype">
 		<!-- 依赖注入业务逻辑组件 -->
 		<property name="userService" ref="userService"/>
 	</bean>

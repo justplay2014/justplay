@@ -4,12 +4,24 @@
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 	
 <hibernate-mapping package="com.justplay.beans">
-	<class name="User" table="jp_test">
-		<id name="id"  type="integer"  column="id">
-			<generator class="native">
-				<param name="user_seq"></param>
-			</generator>
+	<class name="User" table="jp_user">
+		<id name="uid"  type="long"  column="uid">
+			<generator class="com.justplay.id.IdentifierGeneratorImpl"></generator>
 		</id>
-		<property name="name" length="10" not-null="false" type="string" column="name"/>
+		<property name="nickname" length="50" not-null="false" type="string" column="nickname"/>
+		<property name="username" length="50" not-null="true" type="string" column="username"/>
+		<property name="sex" length="1" not-null="true" type="int" column="sex"/>
+		<property name="pwd" length="50" not-null="true" type="string" column="pwd"/>
+		<property name="email" length="50" not-null="true" type="string" column="email"/>
+		<property name="phone" length="25" not-null="false" type="string" column="phone"/>
+		<property name="qq" length="25" not-null="false" type="string" column="qq"/>
+		<property name="description" length="255" not-null="false" type="string" column="description"/>
+		<property name="is_active" length="1" not-null="true" type="int" column="is_active"/>
+		<property name="active_code" length="50" not-null="true" type="string" column="active_code"/>
+		<property name="status" length="1" not-null="true" type="int" column="status"/>
+		<property name="province_id" length="11" not-null="true" type="int" column="province_id"/>
+		<property name="city_id" length="11" not-null="true" type="int" column="city_id"/>
+		<property name="create_time"  type="java.sql.Timestamp" column="create_time"/>
+		<property name="update_time"  type="java.sql.Timestamp" column="update_time"/>
 	</class>
 </hibernate-mapping>

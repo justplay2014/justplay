@@ -24,6 +24,11 @@
     <filter>
 		<filter-name>OpenSessionInViewFilter</filter-name>
 		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+		<init-param>
+			 <!-- singleSession默认为true,若设为false则等于没用OpenSessionInView -->
+			<param-name>singleSession</param-name>
+			<param-value>true</param-value>
+		</init-param>
 	</filter>
 	<filter-mapping>
 		<filter-name>OpenSessionInViewFilter</filter-name>
