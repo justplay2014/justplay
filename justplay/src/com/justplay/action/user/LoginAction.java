@@ -71,7 +71,7 @@ public class LoginAction extends BaseAction {
 	 * @return 如果正则匹配为邮箱格式，则返回true，如果不是，返回false
 	 */
 	private boolean judgeIsOrEmailType(String username) {
-		String regex = "";
+		String regex = "^([a-zA-Z0-9]+[_|-|.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|-|.]?)*[a-zA-Z0-9]+.[a-zA-Z]{2,3}$";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(username);
 		if(m.find()) {
