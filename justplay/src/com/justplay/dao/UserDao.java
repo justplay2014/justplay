@@ -16,7 +16,7 @@ public interface UserDao {
 	public User get(Long id) throws Exception;
 	public List<User> find(String queryString) throws Exception;
 	public List<User> findAll() throws Exception;
-	public List<User> findByColumnName(String columnName) throws Exception;
+	public User findByColumnName(String columnName,Object columnValue) throws Exception;
 	public User execute(HibernateCallback<?> action) throws Exception; 
 	public List<User> executeFind(HibernateCallback<?> action) throws Exception; 
 }

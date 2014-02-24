@@ -41,11 +41,13 @@ public class UserDaoHibernate extends HibernateDaoSupport implements UserDao {
 	public List<User> findAll() throws Exception {
 		return (List<User>) getHibernateTemplate().find("from User");
 	}
-	public List<User> findByColumnName(String columnName) throws Exception {
-		//TODO
-		return null;
+	
+	@SuppressWarnings("unchecked")
+	public User findByColumnName(String columnName,Object columnValue) throws Exception {
+		StringBuffer hql = new StringBuffer().append("from User u where u.")
+				.append(columnName).append("=:").append(columnValue);
+		return (User) getHibernateTemplate().find(hql.toString()).set(1, columnValue);
 	}
-
 	public User execute(HibernateCallback<?> action) throws Exception {
 		//TODO
 		return null;

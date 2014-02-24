@@ -1,8 +1,8 @@
 package com.justplay.action.user;
 
-import com.opensymphony.xwork2.ActionSupport;
+import com.justplay.action.base.BaseAction;
 
-public class RegisterAction extends ActionSupport {
+public class RegisterAction extends BaseAction {
 
 	/**
 	 * 

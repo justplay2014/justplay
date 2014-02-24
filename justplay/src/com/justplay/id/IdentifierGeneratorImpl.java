@@ -22,29 +22,19 @@ import org.hibernate.type.Type;
  */
 public class IdentifierGeneratorImpl implements IdentifierGenerator,Configurable {
 
-	private static final int IDLENG = 4;  //随机数长度
+	private static final int IDLENGTH = 4;  //随机数长度
     private static final String YYMMDDHHMMSS = "yyyyMMddhhmmss";  
       
-    private static String getCurrentDate(){  
+    private String getCurrentDate(){  
         return new SimpleDateFormat(YYMMDDHHMMSS).format(new Date());  
     }  
   
     public Serializable generate(SessionImplementor session, Object obj) throws HibernateException {              
-        String result = new StringBuilder().append(getCurrentDate()).append(RandomStringUtils.randomNumeric(IDLENG)).toString(); 
+        String result = new StringBuilder().append(getCurrentDate()).append(RandomStringUtils.randomNumeric(IDLENGTH)).toString(); 
         return Long.parseLong(result);
     }  
   
     public void configure(Type type, Properties params, Dialect d) throws MappingException {  
-          
-    }  
-    public static void main(String[] args) {  
-        IdentifierGeneratorImpl pu = new IdentifierGeneratorImpl();       
-        System.out.println(pu.generate(null, null));          
-        /*int random = 32; 
-        System.out.println(RandomStringUtils.randomNumeric(random)); 
-        System.out.println(RandomStringUtils.randomAscii(random)); 
-        System.out.println(RandomStringUtils.randomAlphabetic(random)); 
-        System.out.println(RandomStringUtils.randomAlphanumeric(random));*/
           
     }  
 }

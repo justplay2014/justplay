@@ -83,6 +83,11 @@
 	
 	<!-- 把Action交给Spring管理，当使用Spring容器管理Struts2的Action时，由于每一个Action对应于一次用户请求，且封装了该次
  	              请求的状态信息，所以不应将Action配置成单例模式，因此必须指定scope属性，该属性值可指定为prototype和request两种-->
+	
+	<!-- 用户登录 -->
+	<bean id="loginAction" class="com.justplay.action.user.LoginAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+	</bean>
 	<!-- <bean id="registerAction" class="com.justplay.action.user.RegisterAction" scope="prototype">
 		依赖注入业务逻辑组件
 		<property name="userService" ref="userService"/>

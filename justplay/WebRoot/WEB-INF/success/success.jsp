@@ -7,7 +7,7 @@
 </head>
 <body>
 	<center>
-		<span style="font-size:30;color:red">success......</span>
+		<span style="font-size:60;color:red">success......</span>
 	</center>
 </body>
 </html>

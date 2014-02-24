@@ -41,8 +41,8 @@ public class UserServiceImpl implements UserService {
 		return userDao.findAll();
 	}
 
-	public List<User> findByColumnName(String columnName) throws Exception {
-		return userDao.findByColumnName(columnName);
+	public User findByColumnName(String columnName,Object columnValue) throws Exception {
+		return userDao.findByColumnName(columnName,columnValue);
 	}
 
 	public User execute(HibernateCallback<?> action) throws Exception {
