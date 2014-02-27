@@ -19,4 +19,6 @@ public interface UserService {
 	public User findByColumnName(String columnName,Object columnValue) throws Exception;
 	public User execute(HibernateCallback<?> action) throws Exception; 
 	public List<User> executeFind(HibernateCallback<?> action) throws Exception; 
+	
+
 }

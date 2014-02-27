@@ -18,9 +18,29 @@
 			<result>/WEB-INF/page/{1}.jsp</result>
 		</action> -->
 		
+		<!-- 用户名唯一性验证: zls-->
+		<action name="validUser" class="validUserAction">
+			<result name="success" type="json">
+				<param name="root">ok</param>
+			</result>
+		</action>
+		
+		<!-- 邮箱唯一性验证: zls-->
+		<action name="validEmail" class="validEmailAction">
+			<result name="success" type="json">
+				<param name="root">ok</param>
+			</result>
+		</action>
+		
+		<!-- 注册: zls -->
+		<action name="register" class="registerAction">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		
 		<!-- Test -->
-		<action name="test" class="testAction">
-			<result name="success">/WEB-INF/success/success.jsp</result>
+		<action name="testreg" class="com.justplay.action.test.TestRegAction">
+			<result name="success">/WEB-INF/template/user/register.jsp</result>
 		</action>
 	</package>
 </struts>

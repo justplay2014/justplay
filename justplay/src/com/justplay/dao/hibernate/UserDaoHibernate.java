@@ -14,6 +14,7 @@ import com.justplay.dao.UserDao;
 public class UserDaoHibernate extends HibernateDaoSupport implements UserDao {
 
 	public void save(User user) throws Exception {
+		System.out.println(getHibernateTemplate() == null);
 		getHibernateTemplate().save(user);
 	}
 
@@ -32,7 +33,7 @@ public class UserDaoHibernate extends HibernateDaoSupport implements UserDao {
 	public User get(Long id) throws Exception {
 		return getHibernateTemplate().get(User.class,id);
 	}
-
+	
 	@SuppressWarnings("unchecked")
 	public List<User> find(String queryString) throws Exception {
 		return getHibernateTemplate().find(queryString);
@@ -44,15 +45,22 @@ public class UserDaoHibernate extends HibernateDaoSupport implements UserDao {
 	
 	@SuppressWarnings("unchecked")
 	public User findByColumnName(String columnName,Object columnValue) throws Exception {
-		StringBuffer hql = new StringBuffer().append("from User u where u.")
-				.append(columnName).append("=:").append(columnValue);
-		return (User) getHibernateTemplate().find(hql.toString()).set(1, columnValue);
+//		StringBuffer hql = new StringBuffer().append("from User u where u.")
+//				.append(columnName).append("=:").append(columnValue);
+		String hql = "from User u where u." + columnName + "='" + columnValue + "'";
+		List<User> users = getHibernateTemplate().find(hql);
+		
+		if (users.size() == 0) {
+			return null;
+		} else {
+			return (User) getHibernateTemplate().find(hql).get(0);
+		}
 	}
 	public User execute(HibernateCallback<?> action) throws Exception {
 		//TODO
 		return null;
 	}
-
+	
 	public List<User> executeFind(HibernateCallback<?> action) throws Exception {
 		//TODO
 		return null;

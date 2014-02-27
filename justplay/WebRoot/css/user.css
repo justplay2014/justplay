@@ -882,12 +882,12 @@ input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:foc
 
 .bg-rank {
 	display: block;
-	background: url(/imgs/event/bg_rank.jpg) no-repeat
+	background: url(../imgs/event/bg_rank.jpg) no-repeat
 }
 
 .bg-rankFront {
 	display: block;
-	background: url(/imgs/event/bg_rankFront.jpg) no-repeat
+	background: url(../imgs/event/bg_rankFront.jpg) no-repeat
 }
 
 .img50 {
@@ -1165,7 +1165,7 @@ th {
 
 .hby_ajaxLoading {
 	height: 50px;
-	background: url(/imgs/event/ajax-loader.gif) center center no-repeat
+	background: url(../imgs/event/ajax-loader.gif) center center no-repeat
 }
 
 .error {
@@ -1179,7 +1179,7 @@ th {
 	margin-top: -1px;
 	vertical-align: middle;
 	width: 14px;
-	background-image: url(/imgs/event/glyphicons-halflings-white.png);
+	background-image: url(../imgs/event/glyphicons-halflings-white.png);
 	background-repeat: no-repeat;
 	background-position: -313px -119px
 }
@@ -1257,7 +1257,7 @@ a {
 
 .search_box {
 	border-color: #999 !important;
-	background: #fff url(/imgs/icon_search.png) no-repeat 5px center;
+	background: #fff url(../imgs/icon_search.png) no-repeat 5px center;
 	padding-left: 20px !important
 }
 
@@ -1504,7 +1504,7 @@ ul {
 .ul_bullet {
 	margin: 0 18px !important;
 	padding: 0;
-	list-style: url(/imgs/bullet.gif) outside circle !important;
+	list-style: url(../imgs/bullet.gif) outside circle !important;
 	line-height: 20px
 }
 
@@ -2135,7 +2135,7 @@ a {
 }
 
 a#go-top,a#feedback {
-	background: #37a19e url(/imgs/gotop.gif) no-repeat -52px 0;
+	background: #37a19e url(../imgs/gotop.gif) no-repeat -52px 0;
 	width: 52px;
 	height: 52px;
 	text-align: center;
@@ -2211,7 +2211,7 @@ a {
 	margin-left: 0;
 	margin-right: 80px;
 	padding: 1px 0 2px 15px;
-	background: url(/imgs/header_phone_icon.png) 0 0px no-repeat
+	background: url(../imgs/header_phone_icon.png) 0 0px no-repeat
 }
 
 .new_header .top
@@ -2353,7 +2353,7 @@ a {
 .new_header .top .right
 .downicon {
 	padding-right: 12px;
-	background: url(/imgs/header_top_right_sp_arrow.png) right center
+	background: url(../imgs/header_top_right_sp_arrow.png) right center
 		no-repeat;
 	text-decoration: none
 }
@@ -2361,14 +2361,14 @@ a {
 .new_header .top .right .downlist_curr
 .downicon {
 	padding-right: 12px;
-	background: url(/imgs/header_icon_down_active.gif) right center
+	background: url(../imgs/header_icon_down_active.gif) right center
 		no-repeat;
 	text-decoration: none
 }
 
 .new_header .top .right
 .newdownicon {
-	background: url(/imgs/header_ico_message.png) right top no-repeat
+	background: url(../imgs/header_ico_message.png) right top no-repeat
 }
 
 .new_header .top .right
@@ -2423,7 +2423,7 @@ img {
 	font-family: 'microsoft yahei';
 	font-size: 16px;
 	padding-right: 16px;
-	background: url(/imgs/header_arrow_down.png) right center no-repeat
+	background: url(../imgs/header_arrow_down.png) right center no-repeat
 }
 
 .new_header .logo .dest_navlist
@@ -2436,7 +2436,7 @@ img {
 .new_header .logo .navlist_curr
 .navlist_a {
 	color: #0e6596;
-	background: url(/imgs/header_icon_up.gif) right center no-repeat;
+	background: url(../imgs/header_icon_up.gif) right center no-repeat;
 	text-decoration: none
 }
 
@@ -2694,7 +2694,7 @@ em {
 	margin-top: 11px;
 	*margin-top: 0;
 	padding: 1px 1px 1px 26px;
-	background: url(/imgs/header_search_icon.png) 0px center no-repeat
+	background: url(../imgs/header_search_icon.png) 0px center no-repeat
 		#fff;
 	border-radius: 0;
 	font-size: 12px
@@ -2752,7 +2752,7 @@ em {
 	height: 11px;
 	line-height: 100px;
 	overflow: hidden;
-	background: url(/imgs/new_close.png) no-repeat
+	background: url(../imgs/new_close.png) no-repeat
 }
 
 .new_header #new_message
@@ -2866,19 +2866,19 @@ a {
 #footer .helpCenter
 dd.sina {
 	padding-left: 25px;
-	background: url(/imgs/bottom_sina.gif) 0 center no-repeat
+	background: url(../imgs/bottom_sina.gif) 0 center no-repeat
 }
 
 #footer .helpCenter
 dd.weixin {
 	padding-left: 25px;
-	background: url(/imgs/bottom_weixin.gif) 0 center no-repeat
+	background: url(../imgs/bottom_weixin.gif) 0 center no-repeat
 }
 
 #footer .helpCenter
 dd.phone {
 	padding-left: 25px;
-	background: url(/imgs/bottom_phone.gif) 0 center no-repeat
+	background: url(../imgs/bottom_phone.gif) 0 center no-repeat
 }
 
 #footer .helpCenter
@@ -3261,7 +3261,7 @@ h3 {
 	line-height: 22px;
 	font-size: 12px;
 	border: 1px solid #bebebe;
-	background: url(/imgs/my/my_icon.gif) no-repeat 0 -20px;
+	background: url(../imgs/my/my_icon.gif) no-repeat 0 -20px;
 	cursor: pointer;
 	font-family: 'simsun';
 	padding: 0 8px 0 20px;
@@ -3280,7 +3280,7 @@ h3 {
 	display: inline-block;
 	text-align: center;
 	border: 1px solid #bebebe;
-	background: url(/imgs/button_only_bg.gif) repeat-x 0 0;
+	background: url(../imgs/button_only_bg.gif) repeat-x 0 0;
 	color: #666;
 	font-size: 14px;
 	line-height: 24px;
@@ -3312,7 +3312,7 @@ h3 {
 
 .up,.down {
 	padding-left: 20px;
-	background: url(/imgs/event/button.png) -400px -31px no-repeat;
+	background: url(../imgs/event/button.png) -400px -31px no-repeat;
 	border: none;
 	vertical-align: middle
 }
@@ -3326,7 +3326,7 @@ h3 {
 }
 
 .button-up,.button-down {
-	background: url(/imgs/event/btn-upDown.jpg) no-repeat;
+	background: url(../imgs/event/btn-upDown.jpg) no-repeat;
 	color: #fff;
 	cursor: pointer;
 	font-size: 12px;
@@ -3343,7 +3343,7 @@ h3 {
 }
 
 .button-org {
-	background: url(/imgs/register/register_bg.gif) 0 -248px no-repeat;
+	background: url(../imgs/register/register_bg.gif) 0 -248px no-repeat;
 	height: 46px;
 	padding-left: 28px;
 	display: inline-block;
@@ -3352,7 +3352,7 @@ h3 {
 
 .button-org
 input {
-	background: url(/imgs/register/register_bg.gif) right -300px no-repeat;
+	background: url(../imgs/register/register_bg.gif) right -300px no-repeat;
 	line-height: 46px;
 	height: 46px;
 	padding: 0 40px 0 12px;
@@ -3516,7 +3516,7 @@ th {
 	width: 47px;
 	height: 28px;
 	border: 1px solid #88abbe;
-	background: #a6c2d1 url(/imgs/search_btn.gif) no-repeat center center;
+	background: #a6c2d1 url(../imgs/search_btn.gif) no-repeat center center;
 	border-left: none;
 	margin: 0;
 	padding: 0
@@ -3558,7 +3558,7 @@ p {
 	font-size: 14px;
 	border: 1px solid #ccdfee;
 	display: inline-block;
-	background: url(/imgs/tips-list.gif) repeat-x
+	background: url(../imgs/tips-list.gif) repeat-x
 }
 
 .tips-list
@@ -3888,7 +3888,7 @@ p {
 }
 
 .layer-close {
-	background: url(/imgs/event/layer-close.png) no-repeat;
+	background: url(../imgs/event/layer-close.png) no-repeat;
 	float: right;
 	height: 16px;
 	position: relative;
@@ -3954,7 +3954,7 @@ a {
 	overflow: hidden;
 	position: fixed;
 	top: 0;
-	background: url(/imgs/event/shade-bg.png) repeat
+	background: url(../imgs/event/shade-bg.png) repeat
 }
 
 .shade-bg1 {
@@ -3984,7 +3984,7 @@ a {
 	margin-left: -350px;
 	margin-top: -250px;
 	border: none;
-	background: url(/imgs/event/ajax-loader.gif) center center no-repeat
+	background: url(../imgs/event/ajax-loader.gif) center center no-repeat
 		#fff
 }
 
@@ -4008,7 +4008,7 @@ a {
 	line-height: 48px;
 	margin: 12px 5px 0 0;
 	overflow: hidden;
-	background: url(/imgs/event/layer-close.png) 0 0 no-repeat
+	background: url(../imgs/event/layer-close.png) 0 0 no-repeat
 }
 
 .batchManageBar1
@@ -4117,7 +4117,7 @@ p.Img {
 	overflow: hidden;
 	text-align: center;
 	border: 1px solid #DAE6EC;
-	background: url(/imgs/event/ajax-loader.gif) center center no-repeat
+	background: url(../imgs/event/ajax-loader.gif) center center no-repeat
 }
 
 .galleryUploadBox .ImgList ul li p.Img
@@ -4425,7 +4425,7 @@ a.progressCancel {
 	display: block;
 	height: 14px;
 	width: 14px;
-	background-image: url(/imgs/my/cancelbutton.gif);
+	background-image: url(../imgs/my/cancelbutton.gif);
 	background-repeat: no-repeat;
 	background-position: -14px 0px;
 	float: right
@@ -4636,7 +4636,7 @@ h1 {
 
 .item_list {
 	padding: 0;
-	list-style: url(/imgs/bullet.gif) outside circle !important
+	list-style: url(../imgs/bullet.gif) outside circle !important
 }
 
 .item_list
@@ -4714,7 +4714,7 @@ img {
 	position: relative;
 	padding: 40px 0 100px 410px;
 	margin-bottom: 100px;
-	background: url(/imgs/register/register_cover.gif) 20px 75px no-repeat;
+	background: url(../imgs/register/register_cover.gif) 20px 75px no-repeat;
 	background: none;
 	zoom: 1
 }
@@ -4738,7 +4738,7 @@ h2 {
 .register
 form {
 	padding-left: 40px;
-	background: url(/imgs/register/register_form.gif) 0 0 no-repeat
+	background: url(../imgs/register/register_form.gif) 0 0 no-repeat
 }
 
 .register
@@ -4790,7 +4790,7 @@ dd {
 .tips.ok
 .left {
 	width: 40px;
-	background: url(/imgs/register/register_bg.gif) 20px -102px no-repeat
+	background: url(../imgs/register/register_bg.gif) 20px -102px no-repeat
 }
 
 .tips.fail {
@@ -4800,14 +4800,14 @@ dd {
 .tips.fail
 .left {
 	width: 32px;
-	background: url(/imgs/register/register_bg.gif) left -133px no-repeat
+	background: url(../imgs/register/register_bg.gif) left -133px no-repeat
 }
 
 .tips.fail
 .center {
 	float: left;
 	padding-left: 3px;
-	background: url(/imgs/register/register_bg.gif) 0 -170px repeat-x
+	background: url(../imgs/register/register_bg.gif) 0 -170px repeat-x
 }
 
 .tips.fail
@@ -4815,13 +4815,13 @@ dd {
 	float: left;
 	width: 8px;
 	height: 30px;
-	background: url(/imgs/register/register_bg.gif) left -207px no-repeat
+	background: url(../imgs/register/register_bg.gif) left -207px no-repeat
 }
 
 .tips.loading
 .left {
 	width: 40px;
-	background: url(/imgs/register/hby_loading.gif) 5px 0 no-repeat
+	background: url(../imgs/register/hby_loading.gif) 5px 0 no-repeat
 }
 
 .tipsBack {
@@ -4923,11 +4923,11 @@ i {
 	top: -14px;
 	width: 16px;
 	height: 14px;
-	background: url(/imgs/my/detail_bg.png) no-repeat
+	background: url(../imgs/my/detail_bg.png) no-repeat
 }
 
 .button-green {
-	background: url(/imgs/register/register_bg.gif) 0 -248px no-repeat;
+	background: url(../imgs/register/register_bg.gif) 0 -248px no-repeat;
 	height: 46px;
 	padding-left: 28px;
 	display: inline-block;
@@ -4940,7 +4940,7 @@ i {
 
 .button-green
 input {
-	background: url(/imgs/register/register_bg.gif) right -300px no-repeat;
+	background: url(../imgs/register/register_bg.gif) right -300px no-repeat;
 	line-height: 46px;
 	height: 46px;
 	padding: 0 40px 0 12px;
@@ -4971,7 +4971,7 @@ input {
 input {
 	width: 90px;
 	height: 35px;
-	background: url(/imgs/register/register_smallBtn.gif) 0 2px no-repeat;
+	background: url(../imgs/register/register_smallBtn.gif) 0 2px no-repeat;
 	border: none;
 	cursor: pointer;
 	color: #fff;
@@ -5090,13 +5090,13 @@ a {
 
 .login
 .password {
-	background: url(/imgs/register/register_password.gif) 7px center
+	background: url(../imgs/register/register_password.gif) 7px center
 		no-repeat #fff
 }
 
 .login
 .username {
-	background: url(/imgs/register/register_username.gif) 7px center
+	background: url(../imgs/register/register_username.gif) 7px center
 		no-repeat #fff
 }
 
@@ -5390,7 +5390,7 @@ span {
 	font-weight: normal;
 	padding-left: 53px;
 	padding-top: 5px;
-	background: url(/imgs/register/register_bg.gif) no-repeat 0 -32px;
+	background: url(../imgs/register/register_bg.gif) no-repeat 0 -32px;
 	margin: 0 auto;
 	width: 150px
 }
@@ -5413,4 +5413,23 @@ p {
 	line-height: 30px;
 	color: #888;
 	font-size: 14px
+}
+
+#check_field {
+	width: 100px;
+	height: 35px;
+	font-size: 18px;
+	line-height: 28px;
+	text-indent: 5px;
+	border: 1px solid #8e9198;
+	border-radius: 2px 2px;
+	box-shadow: inset 0 0 0 1px rgba(142, 145, 152, 0.2);
+	-moz-box-shadow: inset 0 0 0 1px rgba(142, 145, 152, 0.2);
+	-webkit-box-shadow: inset 0 0 0 1px rgba(142, 145, 152, 0.2)
+}
+
+#check_code {
+	width: 100px;
+	height: 35px;
+	float: left;
 }

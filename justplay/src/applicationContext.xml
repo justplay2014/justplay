@@ -88,10 +88,23 @@
 	<bean id="loginAction" class="com.justplay.action.user.LoginAction" scope="prototype">
 		<property name="userService" ref="userService"/>
 	</bean>
-	<!-- <bean id="registerAction" class="com.justplay.action.user.RegisterAction" scope="prototype">
-		依赖注入业务逻辑组件
+	
+	<!-- 用户唯一性检查: zls-->
+	<bean id="validUserAction" class="com.justplay.action.user.ValidUserAction" scope="prototype">
 		<property name="userService" ref="userService"/>
-	</bean> -->
+	</bean>
+	
+	
+	<!-- 邮箱唯一性检查: zls-->
+	<bean id="validEmailAction" class="com.justplay.action.user.ValidEmailAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+	</bean>
+	
+	<!-- 注册: zls-->
+	<bean id="registerAction" class="com.justplay.action.user.RegisterAction" scope="prototype">
+		<!-- 依赖注入业务逻辑组件 -->
+		<property name="userService" ref="userService"/>
+	</bean>
 	<bean id="testAction" class="com.justplay.action.test.TestHibernateDaoAction" scope="prototype">
 		<!-- 依赖注入业务逻辑组件 -->
 		<property name="userService" ref="userService"/>

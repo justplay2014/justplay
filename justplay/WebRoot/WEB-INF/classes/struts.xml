@@ -22,7 +22,7 @@
 	<!-- 引入各个模块配置文件 -->
 	<include file="struts-user.xml"></include>
 	
-	<package name="justplay_default" extends="struts-default" namespace="/">
+	<package name="justplay_default" extends="json-default" namespace="/">
 		<!-- 拦截器 -->
 		<interceptors>
 			<interceptor-stack name="demoStack">

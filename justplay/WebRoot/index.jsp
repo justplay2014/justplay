@@ -21,6 +21,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    Welcome To JustPlay Project. <br>
+    <h><a href="user/testreg.action">注册</a></h>
   </body>
 </html>

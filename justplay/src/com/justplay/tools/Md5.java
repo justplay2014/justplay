@@ -35,7 +35,7 @@ public class Md5 {
 			return new BASE64Encoder().encode(dist);
 			
 		} catch (NoSuchAlgorithmException e) {
-			log.error("[INFO] "+e.getMessage(),e);
+			log.error("[INFO] "+ e.getMessage(),e);
 			return "";
 		}
 	}
